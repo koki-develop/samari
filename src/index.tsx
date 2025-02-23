@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
+import { StrictMode } from "react";
 
 function start() {
   const element = document.getElementById("root");
@@ -8,7 +9,11 @@ function start() {
   }
 
   const root = createRoot(element);
-  root.render(<App />);
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  );
 }
 
 if (document.readyState === "loading") {
