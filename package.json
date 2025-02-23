@@ -9,6 +9,8 @@
     "fmt": "biome check --write --unsafe ."
   },
   "dependencies": {
+    "@mantine/core": "7.17.0",
+    "@mantine/hooks": "7.17.0",
     "bun-plugin-tailwind": "0.0.14",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -19,6 +21,9 @@
     "@biomejs/biome": "1.9.4",
     "@types/bun": "1.2.3",
     "@types/react": "19.0.10",
-    "@types/react-dom": "19.0.4"
+    "@types/react-dom": "19.0.4",
+    "postcss": "8.5.3",
+    "postcss-preset-mantine": "1.17.0",
+    "postcss-simple-vars": "7.0.1"
   }
 }
