@@ -1,5 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import "@mantine/core/styles.css";
 import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 
 export function App() {
