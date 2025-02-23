@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun --hot src/index.html",
-    "build": "bun run ./tasks/build.ts"
+    "build": "bun run ./tasks/build.ts",
+    "fmt": "biome check --write --unsafe ."
   },
   "dependencies": {
     "bun-plugin-tailwind": "0.0.14",
