@@ -1,8 +1,8 @@
 import Logo from "@/assets/logo/logo.png";
-import { ActionIcon, AppShell, Drawer } from "@mantine/core";
+import { ActionIcon, Anchor, AppShell, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMenu2 } from "@tabler/icons-react";
-import { Outlet } from "react-router";
+import { Link, Outlet } from "react-router";
 import NavList from "./NavList";
 
 export default function Layout() {
@@ -27,7 +27,9 @@ export default function Layout() {
         >
           <IconMenu2 />
         </ActionIcon>
-        <img className="h-7" src={Logo} alt="SAMARI" />
+        <Anchor classNames={{ root: "flex" }} component={Link} to="/">
+          <img className="h-7" src={Logo} alt="SAMARI" />
+        </Anchor>
       </AppShell.Header>
 
       {/* navbar for desktop */}
