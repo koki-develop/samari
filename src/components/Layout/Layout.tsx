@@ -3,6 +3,7 @@ import { ActionIcon, AppShell, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMenu2 } from "@tabler/icons-react";
 import { Outlet } from "react-router";
+import NavList from "./NavList";
 
 export default function Layout() {
   const [opened, { toggle, close }] = useDisclosure();
@@ -30,19 +31,23 @@ export default function Layout() {
       </AppShell.Header>
 
       {/* navbar for desktop */}
-      <AppShell.Navbar visibleFrom="sm">NAVBAR_FOR_DESKTOP</AppShell.Navbar>
+      <AppShell.Navbar visibleFrom="sm">
+        <NavList />
+      </AppShell.Navbar>
 
       {/* navbar for mobile */}
       <Drawer
-        styles={{
-          header: { borderBottom: "1px solid var(--mantine-color-gray-3)" },
+        classNames={{
+          body: "p-0 flex-grow flex flex-col",
+          content: "flex flex-col",
+          header: "border-b border-solid border-[var(--mantine-color-gray-3)]",
         }}
         size="xs"
         hiddenFrom="sm"
         opened={opened}
         onClose={close}
       >
-        NAVBAR_FOR_MOBILE
+        <NavList />
       </Drawer>
 
       <AppShell.Main>
