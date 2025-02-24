@@ -1,14 +1,17 @@
 import { useActivePostGroup } from "@/lib/postGroup";
 import { postGroupCategories } from "@/lib/postGroupCategory";
 import { Accordion, Box, Divider, Text } from "@mantine/core";
+import { useMemo } from "react";
 import NavListFooter from "./NavListFooter";
 import NavListItem from "./NavListItem";
 
 export default function NavList() {
   const activePostGroup = useActivePostGroup();
-  const activePostGroupCategory = postGroupCategories.find((category) =>
-    category.groups.some((group) => group.id === activePostGroup?.id),
-  );
+  const activePostGroupCategory = useMemo(() => {
+    return postGroupCategories.find((category) =>
+      category.groups.some((group) => group.id === activePostGroup?.id),
+    );
+  }, [activePostGroup]);
 
   return (
     <>
