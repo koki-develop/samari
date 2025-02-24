@@ -1,21 +1,11 @@
-# bun-react-tailwind-template
+# SAMARI
 
-To install dependencies:
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/koki-develop/samari)](https://github.com/koki-develop/samari/releases/latest)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/koki-develop/samari/release-please.yml)](https://github.com/koki-develop/samari/actions/workflows/release-please.yml)
+[![GitHub License](https://img.shields.io/github/license/koki-develop/samari)](./LICENSE)
 
-```bash
-bun install
-```
+[samari.news](https://samari.news)
 
-To start a development server:
+## LICENSE
 
-```bash
-bun dev
-```
-
-To run for production:
-
-```bash
-bun start
-```
-
-This project was created using `bun init` in bun v1.2.3. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+[MIT](./LICENSE)
