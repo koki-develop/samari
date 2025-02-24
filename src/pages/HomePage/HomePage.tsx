@@ -1,7 +1,7 @@
 import { usePosts } from "@/lib/post";
 import { useActivePostGroup } from "@/lib/postGroup";
 import { groupBy } from "@/lib/util";
-import { Badge, Box, Button, Loader } from "@mantine/core";
+import { Badge, Box, Button, Loader, Title } from "@mantine/core";
 import { useMemo } from "react";
 import PostList from "./PostList";
 import PostListItem from "./PostListItem";
@@ -27,8 +27,24 @@ export default function HomePage() {
     });
   }, [posts]);
 
+  const title = useMemo(() => {
+    if (activePostGroup) {
+      return `${activePostGroup.name} | SAMARI`;
+    }
+  }, [activePostGroup]);
+
   return (
     <Box className="flex flex-col p-4 pb-28">
+      {activePostGroup && (
+        <Box className="flex items-center gap-2 pb-4 sm:pb-0">
+          <title>{title}</title>
+          <img src={activePostGroup.icon} alt="" className="size-8" />
+          <Title order={1} size="h2">
+            {activePostGroup.name}
+          </Title>
+        </Box>
+      )}
+
       {Object.entries(postsGroupedByDate).map(([date, posts]) => (
         <Box key={date} className="flex flex-col gap-4">
           <Box className="sticky top-[68px] flex justify-center">
