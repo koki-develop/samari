@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider, createBrowserRouter } from "react-router";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
+import PrivacyPage from "./pages/PrivacyPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "privacy",
+        element: <PrivacyPage />,
       },
     ],
   },
