@@ -1,10 +1,8 @@
-import { cp, exists, rmdir } from "node:fs/promises";
+import { $ } from "bun";
 import PluginTailwind from "bun-plugin-tailwind";
 
 // Clear dist directory
-if (await exists("dist")) {
-  await rmdir("dist", { recursive: true });
-}
+await $`rm -rf dist`;
 
 // Build
 Bun.build({
@@ -17,4 +15,4 @@ Bun.build({
 });
 
 // Copy public directory
-await cp("public", "dist", { recursive: true });
+await $`cp -r public dist`;
