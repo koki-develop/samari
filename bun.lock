@@ -6,6 +6,7 @@
       "dependencies": {
         "@mantine/core": "7.17.0",
         "@mantine/hooks": "7.17.0",
+        "@tabler/icons-react": "3.30.0",
         "@tanstack/react-query": "5.66.9",
         "bun-plugin-tailwind": "0.0.14",
         "firebase": "11.3.1",
@@ -190,6 +191,10 @@
     "@protobufjs/pool": ["@protobufjs/pool@1.1.0", "", {}, "sha512-0kELaGSIDBKvcgS4zkjz1PeddatrjYcmMWOlAuAPwAeccUrPHdUqo/J6LiymHHEiJT5NrF1UVwxY14f+fy4WQw=="],
 
     "@protobufjs/utf8": ["@protobufjs/utf8@1.1.0", "", {}, "sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw=="],
+
+    "@tabler/icons": ["@tabler/icons@3.30.0", "", {}, "sha512-c8OKLM48l00u9TFbh2qhSODMONIzML8ajtCyq95rW8vzkWcBrKRPM61tdkThz2j4kd5u17srPGIjqdeRUZdfdw=="],
+
+    "@tabler/icons-react": ["@tabler/icons-react@3.30.0", "", { "dependencies": { "@tabler/icons": "3.30.0" }, "peerDependencies": { "react": ">= 16" } }, "sha512-9KZ9D1UNAyjlLkkYp2HBPHdf6lAJ2aelDqh8YYAnnmLF3xwprWKxxW8+zw5jlI0IwdfN4XFFuzqePkaw+DpIOg=="],
 
     "@tanstack/query-core": ["@tanstack/query-core@5.66.4", "", {}, "sha512-skM/gzNX4shPkqmdTCSoHtJAPMTtmIJNS0hE+xwTTUVYwezArCT34NMermABmBVUg5Ls5aiUXEDXfqwR1oVkcA=="],
 
