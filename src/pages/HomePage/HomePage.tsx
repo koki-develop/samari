@@ -28,7 +28,7 @@ export default function HomePage() {
   }, [posts]);
 
   return (
-    <Box className="flex flex-col gap-4 p-4">
+    <Box className="flex flex-col p-4 pb-28">
       {Object.entries(postsGroupedByDate).map(([date, posts]) => (
         <Box key={date} className="flex flex-col gap-4">
           <Box className="sticky top-[68px] flex justify-center">
