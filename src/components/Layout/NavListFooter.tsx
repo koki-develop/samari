@@ -14,31 +14,22 @@ export default function NavListFooter() {
         </Text>
       </Box>
       <Anchor
-        href={process.env.BUN_PUBLIC_CONTACT_FORM_URL}
-        c="gray"
-        size="sm"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        お問い合わせ
-      </Anchor>
-      <Anchor
         href={process.env.BUN_PUBLIC_FEATURE_REQUEST_FORM_URL}
         c="gray"
         size="sm"
         target="_blank"
         rel="noopener noreferrer"
       >
-        機能要望
+        機能要望フォーム
       </Anchor>
       <Anchor
-        href="https://koki.me"
+        href="https://github.com/koki-develop/samari"
         c="gray"
         size="sm"
         target="_blank"
         rel="noopener noreferrer"
       >
-        運営者
+        GitHub
       </Anchor>
       <Anchor c="gray" size="sm" component={Link} to="/privacy">
         プライバシーポリシー
