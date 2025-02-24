@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun --hot src/index.html",
-    "build": "bun run ./tasks/build.ts",
+    "dev": "dotenvx run -- bun --hot src/index.html",
+    "build": "dotenvx run -- bun run ./tasks/build.ts",
     "fmt": "biome check --write --unsafe ."
   },
   "dependencies": {
