@@ -1,5 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import {
+  type FirestoreDataConverter,
   type QueryDocumentSnapshot,
   collection,
   getDocs,
@@ -10,7 +11,7 @@ import {
   where,
 } from "firebase/firestore/lite";
 import { firestore } from "./firebase";
-import type { PostGroup, PostGroupName } from "./postGroup";
+import { type PostGroup, type PostGroupName, getPostGroup } from "./postGroup";
 
 export type Post = {
   id: string;
@@ -31,6 +32,28 @@ type GetPostsParams = {
   after: QueryDocumentSnapshot | null;
 };
 
+const _postConverter: FirestoreDataConverter<Post> = {
+  fromFirestore: (snapshot) => {
+    const data = snapshot.data();
+    return {
+      id: snapshot.id,
+      group: getPostGroup(data.group),
+
+      url: data.url,
+      source: data.source,
+      title: data.title,
+
+      headline: data.summarized_headline,
+      content: data.summarized_content,
+
+      timestamp: data.timestamp.toDate(),
+    };
+  },
+  toFirestore: () => {
+    throw new Error("Not implemented");
+  },
+};
+
 const _getPosts = async (
   params: GetPostsParams,
 ): Promise<{
@@ -47,29 +70,12 @@ const _getPosts = async (
     ...(params.group ? [where("group", "==", params.group)] : []),
     orderBy("timestamp", "desc"),
     ...(params.after ? [startAfter(params.after)] : []),
-  );
+  ).withConverter(_postConverter);
 
   const snapshot = await getDocs(postsQuery);
-  const posts = snapshot.docs.map((doc) => {
-    const data = doc.data();
-    const post: Post = {
-      id: doc.id,
-      group: data.group,
-
-      url: data.url,
-      source: data.source,
-      title: data.title,
-
-      headline: data.summarized_headline,
-      content: data.summarized_content,
-
-      timestamp: data.timestamp.toDate(),
-    };
-    return post;
-  });
 
   return {
-    posts,
+    posts: snapshot.docs.map((doc) => doc.data()),
     next:
       snapshot.docs.length === count ? (snapshot.docs.at(-1) ?? null) : null,
   };
