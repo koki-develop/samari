@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare": "husky",
     "dev": "dotenvx run -- bun --hot src/index.html",
     "build": "dotenvx run -- bun run ./tasks/build.ts",
     "fmt": "biome check --write --unsafe ."
