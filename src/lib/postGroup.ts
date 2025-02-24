@@ -61,6 +61,42 @@ export type PostGroup = {
   icon: string;
 };
 
+const _icons: Record<PostGroupName, string> = {
+  // Development
+  Bitbucket: BitbucketIcon,
+  CircleCI: CircleCIIcon,
+  GitHub: GitHubIcon,
+  GitLab: GitLabIcon,
+  // Cloud/Infrastructure
+  AWS: AwsIcon,
+  Azure: AzureIcon,
+  Firebase: FirebaseIcon,
+  "Google Cloud": GoogleCloudIcon,
+  Kubernetes: KubernetesIcon,
+  Terraform: TerraformIcon,
+  // Libraries/Frameworks
+  Angular: AngularIcon,
+  Django: DjangoIcon,
+  "Next.js": NextjsIcon,
+  Nuxt: NuxtIcon,
+  Rails: RailsIcon,
+  React: ReactIcon,
+  "Vue.js": VuejsIcon,
+  // Programming
+  Go: GoIcon,
+  Kotlin: KotlinIcon,
+  "Node.js": NodejsIcon,
+  Python: PythonIcon,
+  Ruby: RubyIcon,
+  Rust: RustIcon,
+  Swift: SwiftIcon,
+  TypeScript: TypeScriptIcon,
+};
+
+export const getPostGroupIcon = (name: PostGroupName): string => {
+  return _icons[name];
+};
+
 /*
  * Development
  */
@@ -68,25 +104,25 @@ export type PostGroup = {
 export const bitbucket: PostGroup = {
   id: "bitbucket",
   name: "Bitbucket",
-  icon: BitbucketIcon,
+  icon: getPostGroupIcon("Bitbucket"),
 } as const;
 
 export const circleci: PostGroup = {
   id: "circleci",
   name: "CircleCI",
-  icon: CircleCIIcon,
+  icon: getPostGroupIcon("CircleCI"),
 } as const;
 
 export const github: PostGroup = {
   id: "github",
   name: "GitHub",
-  icon: GitHubIcon,
+  icon: getPostGroupIcon("GitHub"),
 } as const;
 
 export const gitlab: PostGroup = {
   id: "gitlab",
   name: "GitLab",
-  icon: GitLabIcon,
+  icon: getPostGroupIcon("GitLab"),
 } as const;
 
 /*
@@ -96,37 +132,37 @@ export const gitlab: PostGroup = {
 export const aws: PostGroup = {
   id: "aws",
   name: "AWS",
-  icon: AwsIcon,
+  icon: getPostGroupIcon("AWS"),
 } as const;
 
 export const azure: PostGroup = {
   id: "azure",
   name: "Azure",
-  icon: AzureIcon,
+  icon: getPostGroupIcon("Azure"),
 } as const;
 
 export const firebase: PostGroup = {
   id: "firebase",
   name: "Firebase",
-  icon: FirebaseIcon,
+  icon: getPostGroupIcon("Firebase"),
 } as const;
 
 export const googleCloud: PostGroup = {
   id: "google-cloud",
   name: "Google Cloud",
-  icon: GoogleCloudIcon,
+  icon: getPostGroupIcon("Google Cloud"),
 } as const;
 
 export const kubernetes: PostGroup = {
   id: "kubernetes",
   name: "Kubernetes",
-  icon: KubernetesIcon,
+  icon: getPostGroupIcon("Kubernetes"),
 } as const;
 
 export const terraform: PostGroup = {
   id: "terraform",
   name: "Terraform",
-  icon: TerraformIcon,
+  icon: getPostGroupIcon("Terraform"),
 } as const;
 
 /*
@@ -136,43 +172,43 @@ export const terraform: PostGroup = {
 export const angular: PostGroup = {
   id: "angular",
   name: "Angular",
-  icon: AngularIcon,
+  icon: getPostGroupIcon("Angular"),
 } as const;
 
 export const django: PostGroup = {
   id: "django",
   name: "Django",
-  icon: DjangoIcon,
+  icon: getPostGroupIcon("Django"),
 } as const;
 
 export const nextjs: PostGroup = {
   id: "nextjs",
   name: "Next.js",
-  icon: NextjsIcon,
+  icon: getPostGroupIcon("Next.js"),
 } as const;
 
 export const nuxt: PostGroup = {
   id: "nuxt",
   name: "Nuxt",
-  icon: NuxtIcon,
+  icon: getPostGroupIcon("Nuxt"),
 } as const;
 
 export const rails: PostGroup = {
   id: "rails",
   name: "Rails",
-  icon: RailsIcon,
+  icon: getPostGroupIcon("Rails"),
 } as const;
 
 export const react: PostGroup = {
   id: "react",
   name: "React",
-  icon: ReactIcon,
+  icon: getPostGroupIcon("React"),
 } as const;
 
 export const vuejs: PostGroup = {
   id: "vuejs",
   name: "Vue.js",
-  icon: VuejsIcon,
+  icon: getPostGroupIcon("Vue.js"),
 } as const;
 
 /*
@@ -182,47 +218,47 @@ export const vuejs: PostGroup = {
 export const go: PostGroup = {
   id: "go",
   name: "Go",
-  icon: GoIcon,
+  icon: getPostGroupIcon("Go"),
 } as const;
 
 export const kotlin: PostGroup = {
   id: "kotlin",
   name: "Kotlin",
-  icon: KotlinIcon,
+  icon: getPostGroupIcon("Kotlin"),
 } as const;
 
 export const nodejs: PostGroup = {
   id: "nodejs",
   name: "Node.js",
-  icon: NodejsIcon,
+  icon: getPostGroupIcon("Node.js"),
 } as const;
 
 export const python: PostGroup = {
   id: "python",
   name: "Python",
-  icon: PythonIcon,
+  icon: getPostGroupIcon("Python"),
 } as const;
 
 export const ruby: PostGroup = {
   id: "ruby",
   name: "Ruby",
-  icon: RubyIcon,
+  icon: getPostGroupIcon("Ruby"),
 } as const;
 
 export const rust: PostGroup = {
   id: "rust",
   name: "Rust",
-  icon: RustIcon,
+  icon: getPostGroupIcon("Rust"),
 } as const;
 
 export const swift: PostGroup = {
   id: "swift",
   name: "Swift",
-  icon: SwiftIcon,
+  icon: getPostGroupIcon("Swift"),
 } as const;
 
 export const typescript: PostGroup = {
   id: "typescript",
   name: "TypeScript",
-  icon: TypeScriptIcon,
+  icon: getPostGroupIcon("TypeScript"),
 } as const;
