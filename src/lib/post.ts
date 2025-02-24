@@ -11,7 +11,11 @@ import {
   where,
 } from "firebase/firestore/lite";
 import { firestore } from "./firebase";
-import { type PostGroup, type PostGroupName, getPostGroup } from "./postGroup";
+import {
+  type PostGroup,
+  type PostGroupName,
+  getPostGroupByName,
+} from "./postGroup";
 
 export type Post = {
   id: string;
@@ -37,7 +41,7 @@ const _postConverter: FirestoreDataConverter<Post> = {
     const data = snapshot.data();
     return {
       id: snapshot.id,
-      group: getPostGroup(data.group),
+      group: getPostGroupByName(data.group),
 
       url: data.url,
       source: data.source,

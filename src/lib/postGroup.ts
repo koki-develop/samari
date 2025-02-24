@@ -173,8 +173,18 @@ const _groups: Record<PostGroupName, PostGroup> = {
   TypeScript: typescript,
 };
 
-export const getPostGroup = (name: PostGroupName): PostGroup => {
+export const getPostGroupByName = (name: PostGroupName): PostGroup => {
   return _groups[name];
+};
+
+export const getPostGroupById = (id: string): PostGroup | null => {
+  for (const group of Object.values(_groups)) {
+    if (group.id === id) {
+      return group;
+    }
+  }
+
+  return null;
 };
 
 export const useActivePostGroup = (): PostGroup | null => {
@@ -182,11 +192,5 @@ export const useActivePostGroup = (): PostGroup | null => {
   const activeGroupId = searchParams.get("g");
   if (activeGroupId == null) return null;
 
-  for (const group of Object.values(_groups)) {
-    if (group.id === activeGroupId) {
-      return group;
-    }
-  }
-
-  return null;
+  return getPostGroupById(activeGroupId);
 };
