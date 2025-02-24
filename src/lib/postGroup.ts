@@ -93,12 +93,12 @@ const _icons: Record<PostGroupName, string> = {
   TypeScript: TypeScriptIcon,
 };
 
-export const getPostGroupIcon = (name: PostGroupName): string => {
+const _getPostGroupIcon = (name: PostGroupName): string => {
   return _icons[name];
 };
 
 const _buildPostGroup = (id: string, name: PostGroupName): PostGroup => {
-  return { id, name, icon: getPostGroupIcon(name) };
+  return { id, name, icon: _getPostGroupIcon(name) };
 };
 
 // Development
@@ -139,3 +139,39 @@ export const typescript: PostGroup = _buildPostGroup(
   "typescript",
   "TypeScript",
 );
+
+const _groups: Record<PostGroupName, PostGroup> = {
+  // Development
+  Bitbucket: bitbucket,
+  CircleCI: circleci,
+  GitHub: github,
+  GitLab: gitlab,
+  // Cloud / Infrastructure
+  AWS: aws,
+  Azure: azure,
+  Firebase: firebase,
+  "Google Cloud": googleCloud,
+  Kubernetes: kubernetes,
+  Terraform: terraform,
+  // Libraries / Frameworks
+  Angular: angular,
+  Django: django,
+  "Next.js": nextjs,
+  Nuxt: nuxt,
+  Rails: rails,
+  React: react,
+  "Vue.js": vuejs,
+  // Programming
+  Go: go,
+  Kotlin: kotlin,
+  "Node.js": nodejs,
+  Python: python,
+  Ruby: ruby,
+  Rust: rust,
+  Swift: swift,
+  TypeScript: typescript,
+};
+
+export const getPostGroup = (name: PostGroupName): PostGroup => {
+  return _groups[name];
+};
