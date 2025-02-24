@@ -1,4 +1,4 @@
-# SAMARI
+# <img src="./src/assets/logo/icon.png" width="24px" height="24px" /> SAMARI
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/koki-develop/samari)](https://github.com/koki-develop/samari/releases/latest)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/koki-develop/samari/release-please.yml)](https://github.com/koki-develop/samari/actions/workflows/release-please.yml)
