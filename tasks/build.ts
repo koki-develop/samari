@@ -12,6 +12,11 @@ Bun.build({
   sourcemap: "linked",
   minify: true,
   plugins: [PluginTailwind],
+  define: Object.fromEntries(
+    Object.entries(process.env)
+      .filter(([key]) => key.startsWith("BUN_PUBLIC_"))
+      .map(([key, value]) => [`process.env.${key}`, JSON.stringify(value)]),
+  ),
 });
 
 // Copy public directory
