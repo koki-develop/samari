@@ -2,11 +2,16 @@ import Logo from "@/assets/logo/logo.png";
 import { ActionIcon, Anchor, AppShell, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMenu2 } from "@tabler/icons-react";
+import { useCallback } from "react";
 import { Link, Outlet, ScrollRestoration } from "react-router";
 import NavList from "./NavList";
 
 export default function Layout() {
   const [opened, { toggle, close }] = useDisclosure();
+
+  const handleSelectPostGroup = useCallback(() => {
+    close();
+  }, [close]);
 
   return (
     <>
@@ -36,7 +41,7 @@ export default function Layout() {
 
         {/* navbar for desktop */}
         <AppShell.Navbar visibleFrom="sm">
-          <NavList />
+          <NavList onSelectPostGroup={handleSelectPostGroup} />
         </AppShell.Navbar>
 
         {/* navbar for mobile */}
@@ -52,7 +57,7 @@ export default function Layout() {
           opened={opened}
           onClose={close}
         >
-          <NavList />
+          <NavList onSelectPostGroup={handleSelectPostGroup} />
         </Drawer>
 
         <AppShell.Main>

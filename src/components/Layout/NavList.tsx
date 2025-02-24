@@ -6,7 +6,11 @@ import { useLocation } from "react-router";
 import NavListFooter from "./NavListFooter";
 import NavListItem from "./NavListItem";
 
-export default function NavList() {
+export type NavListProps = {
+  onSelectPostGroup: () => void;
+};
+
+export default function NavList({ onSelectPostGroup }: NavListProps) {
   const { pathname } = useLocation();
 
   const activePostGroup = useActivePostGroup();
@@ -24,6 +28,7 @@ export default function NavList() {
           icon={null}
           name="All"
           active={pathname === "/" && activePostGroup == null}
+          onSelectPostGroup={onSelectPostGroup}
         />
 
         <Accordion
@@ -59,6 +64,7 @@ export default function NavList() {
                     icon={group.icon}
                     name={group.name}
                     active={group.id === activePostGroup?.id}
+                    onSelectPostGroup={onSelectPostGroup}
                   />
                 ))}
               </Accordion.Panel>

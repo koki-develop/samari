@@ -6,8 +6,9 @@ type NavListItemProps = {
   id: string | null;
   icon: string | null;
   name: string;
-
   active: boolean;
+
+  onSelectPostGroup: () => void;
 };
 
 export default function NavListItem({
@@ -15,6 +16,7 @@ export default function NavListItem({
   icon,
   name,
   active,
+  onSelectPostGroup,
 }: NavListItemProps) {
   const to = id == null ? "/" : `/?g=${id}`;
 
@@ -37,6 +39,7 @@ export default function NavListItem({
       underline="never"
       component={Link}
       to={to}
+      onClick={onSelectPostGroup}
     >
       {icon && <img className="size-6 object-contain" src={icon} alt="" />}
       {name}
