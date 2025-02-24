@@ -1,10 +1,12 @@
 import { usePosts } from "@/lib/post";
+import { useActivePostGroup } from "@/lib/postGroup";
 import { Box } from "@mantine/core";
 import PostList from "./PostList";
 import PostListItem from "./PostListItem";
 
 export default function HomePage() {
-  const { posts } = usePosts(null); // TODO: get from query params
+  const activePostGroup = useActivePostGroup();
+  const { posts } = usePosts(activePostGroup?.name ?? null);
 
   return (
     <Box className="p-4">
