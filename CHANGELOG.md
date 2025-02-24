@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/koki-develop/samari/compare/v0.1.0...v0.1.1) (2025-02-24)
+
+
+### Bug Fixes
+
+* Add Google Analytics tracking script ([fb9baa9](https://github.com/koki-develop/samari/commit/fb9baa941243fb66400ec210ce8da805ce7fce38))
+
 ## [0.1.0](https://github.com/koki-develop/samari/compare/v0.0.3...v0.1.0) (2025-02-24)
 
 
