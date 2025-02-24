@@ -4,3 +4,7 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @import "@mantine/core/styles.css" layer(mantine);
+
+body {
+  background-color: var(--mantine-color-gray-0);
+}
