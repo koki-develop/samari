@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { clsx, extractHostname } from "./util";
+import { clsx, extractHostname, groupBy } from "./util";
 
 describe("clsx", () => {
   it.each([
@@ -23,5 +23,28 @@ describe("extractHostname", () => {
     ["http://example.com/hoge/fuga", "example.com"],
   ])("extractHostname(%j) should return %j", (url, expected) => {
     expect(extractHostname(url)).toBe(expected);
+  });
+});
+
+describe("groupBy", () => {
+  it("should group by the key", () => {
+    const data = [
+      { id: 1, name: "John" },
+      { id: 2, name: "Jane" },
+      { id: 3, name: "John" },
+      { id: 4, name: "Jane" },
+    ];
+
+    const grouped = groupBy(data, (item) => item.name);
+    expect(grouped).toEqual({
+      John: [
+        { id: 1, name: "John" },
+        { id: 3, name: "John" },
+      ],
+      Jane: [
+        { id: 2, name: "Jane" },
+        { id: 4, name: "Jane" },
+      ],
+    });
   });
 });
