@@ -2,10 +2,13 @@ import { useActivePostGroup } from "@/lib/postGroup";
 import { postGroupCategories } from "@/lib/postGroupCategory";
 import { Accordion, Box, Divider, Text } from "@mantine/core";
 import { useMemo } from "react";
+import { useLocation } from "react-router";
 import NavListFooter from "./NavListFooter";
 import NavListItem from "./NavListItem";
 
 export default function NavList() {
+  const { pathname } = useLocation();
+
   const activePostGroup = useActivePostGroup();
   const activePostGroupCategory = useMemo(() => {
     return postGroupCategories.find((category) =>
@@ -20,7 +23,7 @@ export default function NavList() {
           id={null}
           icon={null}
           name="All"
-          active={activePostGroup == null}
+          active={pathname === "/" && activePostGroup == null}
         />
 
         <Accordion

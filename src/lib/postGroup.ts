@@ -23,7 +23,7 @@ import SwiftIcon from "@/assets/icons/swift.svg";
 import TerraformIcon from "@/assets/icons/terraform.svg";
 import TypeScriptIcon from "@/assets/icons/typescript.svg";
 import VuejsIcon from "@/assets/icons/vuejs.svg";
-import { useSearchParams } from "react-router";
+import { useLocation, useSearchParams } from "react-router";
 
 export type PostGroupName =
   // Development
@@ -188,7 +188,11 @@ export const getPostGroupById = (id: string): PostGroup | null => {
 };
 
 export const useActivePostGroup = (): PostGroup | null => {
+  const { pathname } = useLocation();
   const [searchParams] = useSearchParams();
+
+  if (pathname !== "/") return null;
+
   const activeGroupId = searchParams.get("g");
   if (activeGroupId == null) return null;
 
