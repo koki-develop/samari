@@ -6,6 +6,7 @@
       "dependencies": {
         "@mantine/core": "7.17.0",
         "@mantine/hooks": "7.17.0",
+        "@tanstack/react-query": "5.66.9",
         "bun-plugin-tailwind": "0.0.14",
         "firebase": "11.3.1",
         "react": "19.0.0",
@@ -187,6 +188,10 @@
     "@protobufjs/pool": ["@protobufjs/pool@1.1.0", "", {}, "sha512-0kELaGSIDBKvcgS4zkjz1PeddatrjYcmMWOlAuAPwAeccUrPHdUqo/J6LiymHHEiJT5NrF1UVwxY14f+fy4WQw=="],
 
     "@protobufjs/utf8": ["@protobufjs/utf8@1.1.0", "", {}, "sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw=="],
+
+    "@tanstack/query-core": ["@tanstack/query-core@5.66.4", "", {}, "sha512-skM/gzNX4shPkqmdTCSoHtJAPMTtmIJNS0hE+xwTTUVYwezArCT34NMermABmBVUg5Ls5aiUXEDXfqwR1oVkcA=="],
+
+    "@tanstack/react-query": ["@tanstack/react-query@5.66.9", "", { "dependencies": { "@tanstack/query-core": "5.66.4" }, "peerDependencies": { "react": "^18 || ^19" } }, "sha512-NRI02PHJsP5y2gAuWKP+awamTIBFBSKMnO6UVzi03GTclmHHHInH5UzVgzi5tpu4+FmGfsdT7Umqegobtsp23A=="],
 
     "@types/bun": ["@types/bun@1.2.3", "", { "dependencies": { "bun-types": "1.2.3" } }, "sha512-054h79ipETRfjtsCW9qJK8Ipof67Pw9bodFWmkfkaUaRiIQ1dIV2VTlheshlBx3mpKr0KeK8VqnMMCtgN9rQtw=="],
 
