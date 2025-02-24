@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0](https://github.com/koki-develop/samari/compare/v0.0.3...v0.1.0) (2025-02-24)
+
+
+### Features
+
+* release ([705e717](https://github.com/koki-develop/samari/commit/705e717e7cfecbf4dd4538e0d3da5ab508107210))
+
+
+### Bug Fixes
+
+* Add canonical URL for SEO optimization ([95ad1ec](https://github.com/koki-develop/samari/commit/95ad1ecdd4192fd99cce0d4fbf7242999c1b02d7))
+* Add close navigation drawer on post group selection ([90cce73](https://github.com/koki-develop/samari/commit/90cce7397f848290d2ef1abfb37da253f0532bd5))
+* Update NavListFooter links and text ([1b02896](https://github.com/koki-develop/samari/commit/1b028960ed241dee63b57c74ea564edd1496075f))
+
 ## [0.0.3](https://github.com/koki-develop/samari/compare/v0.0.2...v0.0.3) (2025-02-24)
 
 
