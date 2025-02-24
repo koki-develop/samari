@@ -97,168 +97,45 @@ export const getPostGroupIcon = (name: PostGroupName): string => {
   return _icons[name];
 };
 
-/*
- * Development
- */
+const _buildPostGroup = (id: string, name: PostGroupName): PostGroup => {
+  return { id, name, icon: getPostGroupIcon(name) };
+};
 
-export const bitbucket: PostGroup = {
-  id: "bitbucket",
-  name: "Bitbucket",
-  icon: getPostGroupIcon("Bitbucket"),
-} as const;
-
-export const circleci: PostGroup = {
-  id: "circleci",
-  name: "CircleCI",
-  icon: getPostGroupIcon("CircleCI"),
-} as const;
-
-export const github: PostGroup = {
-  id: "github",
-  name: "GitHub",
-  icon: getPostGroupIcon("GitHub"),
-} as const;
-
-export const gitlab: PostGroup = {
-  id: "gitlab",
-  name: "GitLab",
-  icon: getPostGroupIcon("GitLab"),
-} as const;
-
-/*
- * Cloud / Infrastructure
- */
-
-export const aws: PostGroup = {
-  id: "aws",
-  name: "AWS",
-  icon: getPostGroupIcon("AWS"),
-} as const;
-
-export const azure: PostGroup = {
-  id: "azure",
-  name: "Azure",
-  icon: getPostGroupIcon("Azure"),
-} as const;
-
-export const firebase: PostGroup = {
-  id: "firebase",
-  name: "Firebase",
-  icon: getPostGroupIcon("Firebase"),
-} as const;
-
-export const googleCloud: PostGroup = {
-  id: "google-cloud",
-  name: "Google Cloud",
-  icon: getPostGroupIcon("Google Cloud"),
-} as const;
-
-export const kubernetes: PostGroup = {
-  id: "kubernetes",
-  name: "Kubernetes",
-  icon: getPostGroupIcon("Kubernetes"),
-} as const;
-
-export const terraform: PostGroup = {
-  id: "terraform",
-  name: "Terraform",
-  icon: getPostGroupIcon("Terraform"),
-} as const;
-
-/*
- * Libraries / Frameworks
- */
-
-export const angular: PostGroup = {
-  id: "angular",
-  name: "Angular",
-  icon: getPostGroupIcon("Angular"),
-} as const;
-
-export const django: PostGroup = {
-  id: "django",
-  name: "Django",
-  icon: getPostGroupIcon("Django"),
-} as const;
-
-export const nextjs: PostGroup = {
-  id: "nextjs",
-  name: "Next.js",
-  icon: getPostGroupIcon("Next.js"),
-} as const;
-
-export const nuxt: PostGroup = {
-  id: "nuxt",
-  name: "Nuxt",
-  icon: getPostGroupIcon("Nuxt"),
-} as const;
-
-export const rails: PostGroup = {
-  id: "rails",
-  name: "Rails",
-  icon: getPostGroupIcon("Rails"),
-} as const;
-
-export const react: PostGroup = {
-  id: "react",
-  name: "React",
-  icon: getPostGroupIcon("React"),
-} as const;
-
-export const vuejs: PostGroup = {
-  id: "vuejs",
-  name: "Vue.js",
-  icon: getPostGroupIcon("Vue.js"),
-} as const;
-
-/*
- * Programming
- */
-
-export const go: PostGroup = {
-  id: "go",
-  name: "Go",
-  icon: getPostGroupIcon("Go"),
-} as const;
-
-export const kotlin: PostGroup = {
-  id: "kotlin",
-  name: "Kotlin",
-  icon: getPostGroupIcon("Kotlin"),
-} as const;
-
-export const nodejs: PostGroup = {
-  id: "nodejs",
-  name: "Node.js",
-  icon: getPostGroupIcon("Node.js"),
-} as const;
-
-export const python: PostGroup = {
-  id: "python",
-  name: "Python",
-  icon: getPostGroupIcon("Python"),
-} as const;
-
-export const ruby: PostGroup = {
-  id: "ruby",
-  name: "Ruby",
-  icon: getPostGroupIcon("Ruby"),
-} as const;
-
-export const rust: PostGroup = {
-  id: "rust",
-  name: "Rust",
-  icon: getPostGroupIcon("Rust"),
-} as const;
-
-export const swift: PostGroup = {
-  id: "swift",
-  name: "Swift",
-  icon: getPostGroupIcon("Swift"),
-} as const;
-
-export const typescript: PostGroup = {
-  id: "typescript",
-  name: "TypeScript",
-  icon: getPostGroupIcon("TypeScript"),
-} as const;
+// Development
+export const bitbucket: PostGroup = _buildPostGroup("bitbucket", "Bitbucket");
+export const circleci: PostGroup = _buildPostGroup("circleci", "CircleCI");
+export const github: PostGroup = _buildPostGroup("github", "GitHub");
+export const gitlab: PostGroup = _buildPostGroup("gitlab", "GitLab");
+// Cloud / Infrastructure
+export const aws: PostGroup = _buildPostGroup("aws", "AWS");
+export const azure: PostGroup = _buildPostGroup("azure", "Azure");
+export const firebase: PostGroup = _buildPostGroup("firebase", "Firebase");
+export const googleCloud: PostGroup = _buildPostGroup(
+  "google-cloud",
+  "Google Cloud",
+);
+export const kubernetes: PostGroup = _buildPostGroup(
+  "kubernetes",
+  "Kubernetes",
+);
+export const terraform: PostGroup = _buildPostGroup("terraform", "Terraform");
+// Libraries / Frameworks
+export const angular: PostGroup = _buildPostGroup("angular", "Angular");
+export const django: PostGroup = _buildPostGroup("django", "Django");
+export const nextjs: PostGroup = _buildPostGroup("nextjs", "Next.js");
+export const nuxt: PostGroup = _buildPostGroup("nuxt", "Nuxt");
+export const rails: PostGroup = _buildPostGroup("rails", "Rails");
+export const react: PostGroup = _buildPostGroup("react", "React");
+export const vuejs: PostGroup = _buildPostGroup("vuejs", "Vue.js");
+// Programming
+export const go: PostGroup = _buildPostGroup("go", "Go");
+export const kotlin: PostGroup = _buildPostGroup("kotlin", "Kotlin");
+export const nodejs: PostGroup = _buildPostGroup("nodejs", "Node.js");
+export const python: PostGroup = _buildPostGroup("python", "Python");
+export const ruby: PostGroup = _buildPostGroup("ruby", "Ruby");
+export const rust: PostGroup = _buildPostGroup("rust", "Rust");
+export const swift: PostGroup = _buildPostGroup("swift", "Swift");
+export const typescript: PostGroup = _buildPostGroup(
+  "typescript",
+  "TypeScript",
+);
