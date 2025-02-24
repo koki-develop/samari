@@ -6,6 +6,9 @@ import NavListItem from "./NavListItem";
 
 export default function NavList() {
   const activePostGroup = useActivePostGroup();
+  const activePostGroupCategory = postGroupCategories.find((category) =>
+    category.groups.some((group) => group.id === activePostGroup?.id),
+  );
 
   return (
     <>
@@ -18,7 +21,6 @@ export default function NavList() {
         />
 
         <Accordion
-          multiple
           classNames={{
             control:
               "bg-[var(--mantine-color-gray-0)] hover:bg-[var(--mantine-color-gray-1)] border-b border-solid border-[var(--mantine-color-gray-3)] mb-[-1px] pl-2",
@@ -26,6 +28,8 @@ export default function NavList() {
             panel: "mt-[1px]",
             label: "py-2",
           }}
+          multiple
+          defaultValue={[activePostGroupCategory?.name ?? ""]}
         >
           {postGroupCategories.map((category) => (
             <Accordion.Item key={category.name} value={category.name}>
