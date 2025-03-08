@@ -13,7 +13,7 @@
   "dependencies": {
     "@mantine/core": "7.17.0",
     "@mantine/hooks": "7.17.0",
-    "@tabler/icons-react": "3.30.0",
+    "@tabler/icons-react": "3.31.0",
     "@tanstack/react-query": "5.66.9",
     "bun-plugin-tailwind": "0.0.15",
     "firebase": "11.3.1",
