@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.3](https://github.com/koki-develop/samari/compare/v0.1.2...v0.1.3) (2025-03-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tabler/icons-react to v3.31.0 ([#21](https://github.com/koki-develop/samari/issues/21)) ([841bf3d](https://github.com/koki-develop/samari/commit/841bf3dd9737fab7a9d63803ed1400e99c0b2576))
+* **deps:** update dependency react-markdown to v10.0.1 ([#17](https://github.com/koki-develop/samari/issues/17)) ([9e0840c](https://github.com/koki-develop/samari/commit/9e0840cc182f056771e0a9335f72b3b099bcd2a3))
+* **deps:** update dependency tailwindcss to v4.0.11 ([#24](https://github.com/koki-develop/samari/issues/24)) ([7ef4ded](https://github.com/koki-develop/samari/commit/7ef4dedbcc42986180fff4a2372b36b5865e090e))
+* **deps:** update tailwindcss monorepo ([#20](https://github.com/koki-develop/samari/issues/20)) ([10c7704](https://github.com/koki-develop/samari/commit/10c7704a149ba5d5b719e46c8d206933d0cab5b5))
+
 ## [0.1.2](https://github.com/koki-develop/samari/compare/v0.1.1...v0.1.2) (2025-03-01)
 
 
