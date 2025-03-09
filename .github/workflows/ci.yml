@@ -24,3 +24,47 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: ./.github/actions/setup
       - run: bun test
+
+  deploy-preview:
+    if: ${{ github.event_name == 'pull_request' }}
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: ./.github/actions/setup
+      - name: Deploy preview
+        id: deploy
+        run: |
+          RESULT=$(
+            bun run --silent \
+              deploy:preview \
+                --token="${FIREBASE_TOKEN}" \
+                --json \
+                "pr-${PULL_REQUEST_NUMBER}"
+          )
+          echo "url=$(echo "${RESULT}" | jq -r '.result["samari-news"].url')" >> "$GITHUB_OUTPUT"
+          echo "expireTime=$(echo "${RESULT}" | jq -r '.result["samari-news"].expireTime')" >> "$GITHUB_OUTPUT"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
+
+      - uses: peter-evans/find-comment@3eae4d37986fb5a8592848f6a574fdf654e61f9e # v3.1.0
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Deployed to Preview Environment
+      - uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          edit-mode: replace
+          body: |
+            ## :rocket: Deployed to Preview Environment :rocket:
+
+            - ${{ steps.deploy.outputs.url }} (${{ github.event.pull_request.head.sha }})
+
+            :information_source: This preview will expire in _**${{ steps.deploy.outputs.expireTime }}**_.
