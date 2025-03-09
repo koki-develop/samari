@@ -8,7 +8,9 @@
     "dev": "dotenvx run -- bun --hot src/index.html",
     "build": "dotenvx run -- bun run ./tasks/build.ts",
     "fmt": "biome check --write --unsafe .",
-    "lint": "biome check ."
+    "lint": "biome check .",
+    "deploy": "firebase deploy",
+    "deploy:preview": "firebase hosting:channel:deploy --no-authorized-domains"
   },
   "dependencies": {
     "@mantine/core": "7.17.0",
