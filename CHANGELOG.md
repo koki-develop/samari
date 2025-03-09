@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.4](https://github.com/koki-develop/samari/compare/v0.1.3...v0.1.4) (2025-03-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.67.1 ([#13](https://github.com/koki-develop/samari/issues/13)) ([f48525b](https://github.com/koki-develop/samari/commit/f48525b4d6442b859288d0b98d076a143752b6f2))
+* **deps:** update dependency react-markdown to v10.1.0 ([#23](https://github.com/koki-develop/samari/issues/23)) ([a87d132](https://github.com/koki-develop/samari/commit/a87d1324e72d527642798b82a05288deda0b1b8b))
+* **deps:** update mantine monorepo to v7.17.1 ([#16](https://github.com/koki-develop/samari/issues/16)) ([e42bf59](https://github.com/koki-develop/samari/commit/e42bf5915b1f898ec3c55c652136000ac04a261d))
+
 ## [0.1.3](https://github.com/koki-develop/samari/compare/v0.1.2...v0.1.3) (2025-03-08)
 
 
