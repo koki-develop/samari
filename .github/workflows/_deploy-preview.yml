@@ -1,0 +1,72 @@
+name: Deploy Preview
+
+on:
+  workflow_call:
+    inputs:
+      pr-number:
+        type: number
+        required: true
+      sha:
+        type: string
+        required: true
+    secrets:
+      FIREBASE_TOKEN:
+        required: true
+      DOTENV_KEYS:
+        required: true
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: ./.github/actions/setup
+
+      - name: Create .env.keys
+        env:
+          DOTENV_KEYS: ${{ secrets.DOTENV_KEYS}}
+        run: echo "$DOTENV_KEYS" > .env.keys
+      - run: bun run build
+
+      - name: Deploy preview
+        id: deploy
+        run: |
+          RESULT=$(
+            bun run --silent \
+              deploy:preview \
+                --token="${FIREBASE_TOKEN}" \
+                --json \
+                "pr-${PULL_REQUEST_NUMBER}"
+          )
+          echo "${RESULT}"
+
+          URL=$(echo "${RESULT}" | jq -r '.result["samari-news"].url')
+          EXPIRE_TIME=$(echo "${RESULT}" | jq -r '.result["samari-news"].expireTime')
+          {
+            echo "url=${URL}"
+            echo "expireTime=${EXPIRE_TIME}"
+          } >> "$GITHUB_OUTPUT"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PULL_REQUEST_NUMBER: ${{ inputs.pr-number }}
+
+      - uses: peter-evans/find-comment@3eae4d37986fb5a8592848f6a574fdf654e61f9e # v3.1.0
+        id: fc
+        with:
+          issue-number: ${{ inputs.pr-number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Deployed to Preview Environment
+      - uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ inputs.pr-number }}
+          edit-mode: replace
+          body: |
+            ## :rocket: Deployed to Preview Environment :rocket:
+
+            - ${{ steps.deploy.outputs.url }} (${{ inputs.sha }})
+
+            :information_source: This preview will expire in _**${{ steps.deploy.outputs.expireTime }}**_.

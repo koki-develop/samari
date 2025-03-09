@@ -24,3 +24,15 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: ./.github/actions/setup
       - run: bun test
+
+  deploy-preview:
+    if: ${{ github.event_name == 'pull_request' }}
+    needs: [lint, test]
+    uses: ./.github/workflows/_deploy-preview.yml
+    permissions:
+      contents: read
+      pull-requests: write
+    with:
+      pr-number: ${{ github.event.pull_request.number }}
+      sha: ${{ github.event.pull_request.head.sha }}
+    secrets: inherit
