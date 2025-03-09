@@ -32,6 +32,7 @@ jobs:
                 --json \
                 "pr-${PULL_REQUEST_NUMBER}"
           )
+          echo "${RESULT}"
           echo "url=$(echo "${RESULT}" | jq -r '.result["samari-news"].url')" >> "$GITHUB_OUTPUT"
           echo "expireTime=$(echo "${RESULT}" | jq -r '.result["samari-news"].expireTime')" >> "$GITHUB_OUTPUT"
         env:
