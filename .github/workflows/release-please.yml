@@ -16,16 +16,30 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     outputs:
-      should-release: ${{ steps.release-please.outputs.release_created }}
+      pr: ${{ steps.release-please.outputs.pr }}
+      should-release-preview: ${{ steps.release-please.outputs.prs_created }}
+      should-release-production: ${{ steps.release-please.outputs.release_created }}
     steps:
       - uses: googleapis/release-please-action@d1a8f221d7723166f48a584aebba00ef3f6febec # v4.1.4
         id: release-please
         with:
           release-type: node
 
-  release:
+  deploy-preview:
     needs: [release-please]
-    if: ${{ needs.release-please.outputs.should-release == 'true' }}
+    if: ${{ needs.release-please.outputs.should-release-preview == 'true' }}
+    uses: ./.github/workflows/_deploy-preview.yml
+    permissions:
+      contents: read
+      pull-requests: write
+    with:
+      pr-number: ${{ fromJson(needs.release-please.outputs.pr).number }}
+      sha: ${{ github.sha }}
+    secrets: inherit
+
+  deploy-production:
+    needs: [release-please]
+    if: ${{ needs.release-please.outputs.should-release-production == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
