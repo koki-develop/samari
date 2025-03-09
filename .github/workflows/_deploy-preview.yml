@@ -12,6 +12,8 @@ on:
     secrets:
       FIREBASE_TOKEN:
         required: true
+      DOTENV_KEYS:
+        required: true
 
 jobs:
   deploy-preview:
@@ -22,6 +24,13 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: ./.github/actions/setup
+
+      - name: Create .env.keys
+        env:
+          DOTENV_KEYS: ${{ secrets.DOTENV_KEYS}}
+        run: echo "$DOTENV_KEYS" > .env.keys
+      - run: bun run build
+
       - name: Deploy preview
         id: deploy
         run: |
