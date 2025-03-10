@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.5](https://github.com/koki-develop/samari/compare/v0.1.4...v0.1.5) (2025-03-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.67.2 ([#28](https://github.com/koki-develop/samari/issues/28)) ([03a288e](https://github.com/koki-develop/samari/commit/03a288e43faf377c02c7500b7f0aa6da45b830d4))
+* **deps:** update dependency firebase to v11.4.0 ([#14](https://github.com/koki-develop/samari/issues/14)) ([0f7f8b5](https://github.com/koki-develop/samari/commit/0f7f8b5de0ee728be0177d4975d2a6b7d5a5ae88))
+* **deps:** update dependency react-router to v7.3.0 ([#29](https://github.com/koki-develop/samari/issues/29)) ([27f9281](https://github.com/koki-develop/samari/commit/27f9281c79cafe1ed1b9ad0d169a32770a148b50))
+* **deps:** update dependency tailwindcss to v4.0.12 ([#25](https://github.com/koki-develop/samari/issues/25)) ([475b546](https://github.com/koki-develop/samari/commit/475b5463419768ec480a7cbd4ab20e8d29f322a5))
+
 ## [0.1.4](https://github.com/koki-develop/samari/compare/v0.1.3...v0.1.4) (2025-03-09)
 
 
