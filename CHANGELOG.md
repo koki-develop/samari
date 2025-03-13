@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/koki-develop/samari/compare/v0.1.5...v0.1.6) (2025-03-13)
+
+
+### Bug Fixes
+
+* Use DOTENV_PRIVATE_KEY ([e091948](https://github.com/koki-develop/samari/commit/e0919484b00e142d76ac5137872fd18eb456b95c))
+
 ## [0.1.5](https://github.com/koki-develop/samari/compare/v0.1.4...v0.1.5) (2025-03-10)
 
 
