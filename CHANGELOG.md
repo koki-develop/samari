@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.7](https://github.com/koki-develop/samari/compare/v0.1.6...v0.1.7) (2025-03-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.67.3 ([#34](https://github.com/koki-develop/samari/issues/34)) ([5c19036](https://github.com/koki-develop/samari/commit/5c19036ad05bcfd9d6673b744cfb3bbfe4b8cf5a))
+* **deps:** update dependency tailwindcss to v4.0.13 ([#35](https://github.com/koki-develop/samari/issues/35)) ([87e41dc](https://github.com/koki-develop/samari/commit/87e41dc8088caad8acb01291b35c640b7c607d78))
+
 ## [0.1.6](https://github.com/koki-develop/samari/compare/v0.1.5...v0.1.6) (2025-03-13)
 
 
