@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/koki-develop/samari/compare/v0.1.7...v0.1.8) (2025-03-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tailwindcss to v4.0.14 ([#40](https://github.com/koki-develop/samari/issues/40)) ([e745494](https://github.com/koki-develop/samari/commit/e745494417299cc72768ffd1ae2378a6d86d7743))
+
 ## [0.1.7](https://github.com/koki-develop/samari/compare/v0.1.6...v0.1.7) (2025-03-14)
 
 
