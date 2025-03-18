@@ -1,5 +1,7 @@
 name: Release Please
 
+permissions: {}
+
 on:
   push:
     branches:

@@ -1,5 +1,7 @@
 name: Deploy Preview
 
+permissions: {}
+
 on:
   workflow_call:
     inputs:
