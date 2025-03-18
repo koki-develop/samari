@@ -37,7 +37,9 @@ jobs:
     with:
       pr-number: ${{ fromJson(needs.release-please.outputs.pr).number }}
       sha: ${{ github.sha }}
-    secrets: inherit
+    secrets:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      DOTENV_PRIVATE_KEY: ${{ secrets.DOTENV_PRIVATE_KEY }}
 
   deploy-production:
     needs: [release-please]

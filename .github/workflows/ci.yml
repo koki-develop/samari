@@ -41,7 +41,9 @@ jobs:
     with:
       pr-number: ${{ github.event.pull_request.number }}
       sha: ${{ github.event.pull_request.head.sha }}
-    secrets: inherit
+    secrets:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      DOTENV_PRIVATE_KEY: ${{ secrets.DOTENV_PRIVATE_KEY }}
 
   github-actions-lint:
     runs-on: ubuntu-latest
