@@ -13,6 +13,7 @@ concurrency:
 
 jobs:
   release-please:
+    timeout-minutes: 5
     permissions:
       contents: write
       pull-requests: write
@@ -42,6 +43,7 @@ jobs:
       DOTENV_PRIVATE_KEY: ${{ secrets.DOTENV_PRIVATE_KEY }}
 
   deploy-production:
+    timeout-minutes: 5
     needs: [release-please]
     if: ${{ needs.release-please.outputs.should-release-production == 'true' }}
     runs-on: ubuntu-latest
