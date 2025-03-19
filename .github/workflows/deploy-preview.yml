@@ -4,6 +4,17 @@ permissions: {}
 
 on:
   pull_request:
+    paths-ignore:
+      - ".github/**"
+      # docs
+      - "README.md"
+      - "LICENSE"
+      # settings
+      - "renovate.json"
+      - ".vscode/**"
+      - "biome.json"
+      - ".lintstagedrc.json"
+      - ".husky/**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
