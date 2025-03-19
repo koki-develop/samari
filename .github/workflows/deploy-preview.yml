@@ -6,6 +6,7 @@ on:
   pull_request:
     paths-ignore:
       - ".github/**"
+      - "!.github/workflows/deploy-preview.yml"
       # docs
       - "README.md"
       - "LICENSE"
