@@ -29,7 +29,7 @@
     "@biomejs/biome": "1.9.4",
     "@dotenvx/dotenvx": "1.38.5",
     "@types/bun": "1.2.5",
-    "@types/react": "19.0.10",
+    "@types/react": "19.0.11",
     "@types/react-dom": "19.0.4",
     "firebase-tools": "13.34.0",
     "husky": "9.1.7",
