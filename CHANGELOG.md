@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.10](https://github.com/koki-develop/samari/compare/v0.1.9...v0.1.10) (2025-03-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.69.0 ([#51](https://github.com/koki-develop/samari/issues/51)) ([0eb3989](https://github.com/koki-develop/samari/commit/0eb39892b8a31b80d935376f3052bac1a683a15e))
+
 ## [0.1.9](https://github.com/koki-develop/samari/compare/v0.1.8...v0.1.9) (2025-03-16)
 
 
