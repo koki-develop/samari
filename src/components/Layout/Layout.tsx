@@ -1,9 +1,9 @@
-import Logo from "@/assets/logo/logo.png";
 import { ActionIcon, Anchor, AppShell, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useCallback } from "react";
 import { Link, Outlet, ScrollRestoration } from "react-router";
+import Logo from "@/assets/logo/logo.png";
 import NavList from "./NavList";
 
 export default function Layout() {

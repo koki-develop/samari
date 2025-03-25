@@ -1,7 +1,7 @@
-import type { Post } from "@/lib/post";
-import { extractHostname } from "@/lib/util";
 import { Accordion, Anchor, Box, Text, Title } from "@mantine/core";
 import { IconExternalLink } from "@tabler/icons-react";
+import type { Post } from "@/lib/post";
+import { extractHostname } from "@/lib/util";
 
 export type PostListItemProps = {
   post: Post;

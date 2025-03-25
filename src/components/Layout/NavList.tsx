@@ -1,8 +1,8 @@
-import { useActivePostGroup } from "@/lib/postGroup";
-import { postGroupCategories } from "@/lib/postGroupCategory";
 import { Accordion, Box, Divider, Text } from "@mantine/core";
 import { useMemo } from "react";
 import { useLocation } from "react-router";
+import { useActivePostGroup } from "@/lib/postGroup";
+import { postGroupCategories } from "@/lib/postGroupCategory";
 import NavListFooter from "./NavListFooter";
 import NavListItem from "./NavListItem";
 

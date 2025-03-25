@@ -1,8 +1,8 @@
+import { Badge, Box, Button, Loader, Title } from "@mantine/core";
+import { useMemo } from "react";
 import { usePosts } from "@/lib/post";
 import { useActivePostGroup } from "@/lib/postGroup";
 import { groupBy } from "@/lib/util";
-import { Badge, Box, Button, Loader, Title } from "@mantine/core";
-import { useMemo } from "react";
 import PostList from "./PostList";
 import PostListItem from "./PostListItem";
 
