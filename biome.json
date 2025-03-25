@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**", "!**/dist", "!**/package.json"]
+    "includes": ["**", "!dist", "!package.json"]
   },
   "formatter": {
     "enabled": true,
