@@ -7,7 +7,6 @@ import {
 } from "@tabler/icons-react";
 import type { ReactNode } from "react";
 import {
-  type PostGroup,
   angular,
   aws,
   azure,
@@ -24,6 +23,7 @@ import {
   nextjs,
   nodejs,
   nuxt,
+  type PostGroup,
   python,
   rails,
   react,

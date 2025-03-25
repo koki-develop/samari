@@ -1,7 +1,7 @@
 import "./index.css";
 import { MantineProvider } from "@mantine/core";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { RouterProvider, createBrowserRouter } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import PrivacyPage from "./pages/PrivacyPage";

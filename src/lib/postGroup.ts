@@ -1,3 +1,4 @@
+import { useLocation, useSearchParams } from "react-router";
 import AngularIcon from "@/assets/icons/angular.svg";
 import AwsIcon from "@/assets/icons/aws.svg";
 import AzureIcon from "@/assets/icons/azure.svg";
@@ -23,7 +24,6 @@ import SwiftIcon from "@/assets/icons/swift.svg";
 import TerraformIcon from "@/assets/icons/terraform.svg";
 import TypeScriptIcon from "@/assets/icons/typescript.svg";
 import VuejsIcon from "@/assets/icons/vuejs.svg";
-import { useLocation, useSearchParams } from "react-router";
 
 export type PostGroupName =
   // Development

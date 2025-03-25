@@ -1,20 +1,20 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import {
-  type FirestoreDataConverter,
-  type QueryDocumentSnapshot,
   collection,
+  type FirestoreDataConverter,
   getDocs,
   limit,
   orderBy,
+  type QueryDocumentSnapshot,
   query,
   startAfter,
   where,
 } from "firebase/firestore/lite";
 import { firestore } from "./firebase";
 import {
+  getPostGroupByName,
   type PostGroup,
   type PostGroupName,
-  getPostGroupByName,
 } from "./postGroup";
 
 export type Post = {
@@ -86,7 +86,7 @@ const _getPosts = async (
 };
 
 export const usePosts = (group: PostGroupName | null) => {
-  const { data, error, ...values } = useInfiniteQuery({
+  const { data, ...values } = useInfiniteQuery({
     queryKey: ["posts", group],
     gcTime: 60 * 30 * 1000,
     initialPageParam: null as QueryDocumentSnapshot | null,

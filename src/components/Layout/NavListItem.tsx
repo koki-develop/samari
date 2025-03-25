@@ -1,6 +1,6 @@
-import { clsx } from "@/lib/util";
 import { Anchor } from "@mantine/core";
 import { Link } from "react-router";
+import { clsx } from "@/lib/util";
 
 type NavListItemProps = {
   id: string | null;
