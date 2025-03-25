@@ -1,64 +1,34 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.0-beta.1/schema.json",
-  "vcs": {
-    "enabled": false,
-    "clientKind": "git",
-    "useIgnoreFile": false
-  },
-  "files": {
-    "ignoreUnknown": false,
-    "includes": ["**", "!**/dist", "!**/package.json"]
-  },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "space"
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on"
-      }
-    }
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "style": {
-        "useLiteralEnumMembers": "error",
-        "noCommaOperator": "error",
-        "useNodejsImportProtocol": "error",
-        "useAsConstAssertion": "error",
-        "useNumericLiterals": "error",
-        "useEnumInitializers": "error",
-        "useSelfClosingElements": "error",
-        "useConst": "error",
-        "useSingleVarDeclarator": "error",
-        "noUnusedTemplateLiteral": "error",
-        "useNumberNamespace": "error",
-        "noInferrableTypes": "error",
-        "useExponentiationOperator": "error",
-        "useTemplate": "error",
-        "noParameterAssign": "error",
-        "noNonNullAssertion": "error",
-        "useDefaultParameterLast": "error",
-        "noArguments": "error",
-        "useImportType": "error",
-        "useExportType": "error",
-        "noUselessElse": "error",
-        "useShorthandFunctionType": "error"
-      },
-      "correctness": {
-        "noUnusedImports": "error",
-        "noUnusedVariables": "error"
-      },
-      "nursery": {
-        "useSortedClasses": "error"
-      }
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double"
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/2.0.0-beta.1/schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": false
+	},
+	"files": {
+		"ignoreUnknown": false
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	}
 }
