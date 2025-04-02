@@ -31,7 +31,7 @@
     "@types/bun": "1.2.6",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
-    "firebase-tools": "13.35.1",
+    "firebase-tools": "14.1.0",
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
     "postcss": "8.5.3",
