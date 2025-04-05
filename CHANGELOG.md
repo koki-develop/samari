@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.12](https://github.com/koki-develop/samari/compare/v0.1.11...v0.1.12) (2025-04-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.71.10 ([#66](https://github.com/koki-develop/samari/issues/66)) ([b9ef44c](https://github.com/koki-develop/samari/commit/b9ef44c63cca940713581abfcb7ae6675b0beeb7))
+* **deps:** update dependency firebase to v11.6.0 ([#69](https://github.com/koki-develop/samari/issues/69)) ([6ff7375](https://github.com/koki-develop/samari/commit/6ff7375e77a41660b69be9365f60845165562b28))
+* **deps:** update dependency react-router to v7.5.0 ([#67](https://github.com/koki-develop/samari/issues/67)) ([e3f0fd6](https://github.com/koki-develop/samari/commit/e3f0fd67a2a83d569916e5ed335462a37fd61c68))
+* **deps:** update dependency tailwindcss to v4.1.3 ([#62](https://github.com/koki-develop/samari/issues/62)) ([6544941](https://github.com/koki-develop/samari/commit/654494163cf64f9dbf8cc0c5cdb2ab2dc131d72c))
+* **deps:** update mantine monorepo to v7.17.3 ([#64](https://github.com/koki-develop/samari/issues/64)) ([48148b5](https://github.com/koki-develop/samari/commit/48148b5b21dc1af6133f084d89a351e80901eb94))
+* **deps:** update react monorepo ([#68](https://github.com/koki-develop/samari/issues/68)) ([29affec](https://github.com/koki-develop/samari/commit/29affecc54ec368a48deaa71a6176a3df49100b6))
+
 ## [0.1.11](https://github.com/koki-develop/samari/compare/v0.1.10...v0.1.11) (2025-03-24)
 
 
