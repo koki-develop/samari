@@ -7,7 +7,7 @@
         "@mantine/core": "7.17.3",
         "@mantine/hooks": "7.17.3",
         "@tabler/icons-react": "3.31.0",
-        "@tanstack/react-query": "5.71.10",
+        "@tanstack/react-query": "5.72.0",
         "bun-plugin-tailwind": "0.0.15",
         "firebase": "11.6.0",
         "react": "19.1.0",
@@ -244,9 +244,9 @@
 
     "@tabler/icons-react": ["@tabler/icons-react@3.31.0", "", { "dependencies": { "@tabler/icons": "3.31.0" }, "peerDependencies": { "react": ">= 16" } }, "sha512-2rrCM5y/VnaVKnORpDdAua9SEGuJKVqPtWxeQ/vUVsgaUx30LDgBZph7/lterXxDY1IKR6NO//HDhWiifXTi3w=="],
 
-    "@tanstack/query-core": ["@tanstack/query-core@5.71.10", "", {}, "sha512-/fKEY8fO1nbszfrBatzmhJa1nEwIKn0c6Tv2A1ocSA5OiD2GukOIV8nnBbvJRgZb/VIoBy9/N4PVbABI8YQLow=="],
+    "@tanstack/query-core": ["@tanstack/query-core@5.72.0", "", {}, "sha512-aa3p6Mou++JLLxxxVX9AB9uGeRIGc0JWkw96GASXuMG8K3D+JpYbSFcqXbkGFJ1eX2jKHPurmCBoO43RjjXJCA=="],
 
-    "@tanstack/react-query": ["@tanstack/react-query@5.71.10", "", { "dependencies": { "@tanstack/query-core": "5.71.10" }, "peerDependencies": { "react": "^18 || ^19" } }, "sha512-mQYM/ObpL8YMDz8vCoUuHkbe8Yu7NnVRH8aBaBa/3zlufjp1f1VuWjeO3TcumNHfuVMDwEAGinsgwrB7OKADiQ=="],
+    "@tanstack/react-query": ["@tanstack/react-query@5.72.0", "", { "dependencies": { "@tanstack/query-core": "5.72.0" }, "peerDependencies": { "react": "^18 || ^19" } }, "sha512-4Dejq/IiXrPlr/0xxj4H2GbC6KckwfTCoHWbd02+UoIV0laC9yke0d0KegmFdXJA712I6UCuy8WpPM76uuPJ+w=="],
 
     "@tootallnate/once": ["@tootallnate/once@2.0.0", "", {}, "sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A=="],
 
