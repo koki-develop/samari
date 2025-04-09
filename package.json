@@ -30,7 +30,7 @@
     "@dotenvx/dotenvx": "1.39.1",
     "@types/bun": "1.2.8",
     "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
+    "@types/react-dom": "19.1.2",
     "firebase-tools": "14.1.0",
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
