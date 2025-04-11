@@ -28,7 +28,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.0.0-beta.1",
     "@dotenvx/dotenvx": "1.39.1",
-    "@types/bun": "1.2.8",
+    "@types/bun": "1.2.9",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
     "firebase-tools": "14.1.0",
