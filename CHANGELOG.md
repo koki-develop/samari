@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.14](https://github.com/koki-develop/samari/compare/v0.1.13...v0.1.14) (2025-04-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.72.2 ([#74](https://github.com/koki-develop/samari/issues/74)) ([c2fe81e](https://github.com/koki-develop/samari/commit/c2fe81ed8f9040993b2b04dac2ba79de64678893))
+* **deps:** update mantine monorepo to v7.17.4 ([#75](https://github.com/koki-develop/samari/issues/75)) ([59a801b](https://github.com/koki-develop/samari/commit/59a801b4d7bd82b8e1b1cf727fcbeba9e8d83ed7))
+
 ## [0.1.13](https://github.com/koki-develop/samari/compare/v0.1.12...v0.1.13) (2025-04-08)
 
 
