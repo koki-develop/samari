@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.15](https://github.com/koki-develop/samari/compare/v0.1.14...v0.1.15) (2025-05-02)
+
+
+### Bug Fixes
+
+* Fixed typo ([fe539e8](https://github.com/koki-develop/samari/commit/fe539e80061f6c18270dd8e2b9e4a220d08ca5b7))
+
 ## [0.1.14](https://github.com/koki-develop/samari/compare/v0.1.13...v0.1.14) (2025-04-12)
 
 
