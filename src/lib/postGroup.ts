@@ -31,7 +31,7 @@ export type PostGroupName =
   | "CircleCI"
   | "GitHub"
   | "GitLab"
-  // Cloud/Infrastucture
+  // Cloud/Infrastructure
   | "AWS"
   | "Azure"
   | "Firebase"

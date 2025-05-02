@@ -53,7 +53,7 @@ export const postGroupCategories: PostGroupCategory[] = [
     groups: [bitbucket, circleci, github, gitlab],
   },
   {
-    name: "Cloud / Infrastucture",
+    name: "Cloud / Infrastructure",
     icon: <IconCloud {...iconProps} />,
     groups: [aws, azure, firebase, googleCloud, kubernetes, terraform],
   },
