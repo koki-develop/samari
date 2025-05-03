@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.16](https://github.com/koki-develop/samari/compare/v0.1.15...v0.1.16) (2025-05-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.75.1 ([#80](https://github.com/koki-develop/samari/issues/80)) ([e5b7f6b](https://github.com/koki-develop/samari/commit/e5b7f6b4e242479d6bc33d68466c160f11371e95))
+* **deps:** update dependency react-router to v7.5.2 [security] ([#93](https://github.com/koki-develop/samari/issues/93)) ([24d9224](https://github.com/koki-develop/samari/commit/24d92245914f63493fa1e8de9102f9ad4428cd90))
+* **deps:** update dependency tailwindcss to v4.1.5 ([#82](https://github.com/koki-develop/samari/issues/82)) ([63b335d](https://github.com/koki-develop/samari/commit/63b335d501e81a067a1e178ad1c9db2ad72f91b3))
+* **deps:** update mantine monorepo to v7.17.7 ([#90](https://github.com/koki-develop/samari/issues/90)) ([0db340e](https://github.com/koki-develop/samari/commit/0db340e4126ac8ba191538d8ec1e4eba87eed4aa))
+
 ## [0.1.15](https://github.com/koki-develop/samari/compare/v0.1.14...v0.1.15) (2025-05-02)
 
 
