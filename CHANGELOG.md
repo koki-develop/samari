@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.17](https://github.com/koki-develop/samari/compare/v0.1.16...v0.1.17) (2025-05-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency firebase to v11.6.1 ([#91](https://github.com/koki-develop/samari/issues/91)) ([b402589](https://github.com/koki-develop/samari/commit/b4025899de791a9175d8d5808ab96d840ee50282))
+* **deps:** update dependency react-router to v7.5.3 ([#99](https://github.com/koki-develop/samari/issues/99)) ([17a0a97](https://github.com/koki-develop/samari/commit/17a0a97ea1448f82daae00723b1cd2974b142d21))
+
 ## [0.1.16](https://github.com/koki-develop/samari/compare/v0.1.15...v0.1.16) (2025-05-03)
 
 
