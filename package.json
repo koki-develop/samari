@@ -16,7 +16,7 @@
     "@mantine/core": "7.17.7",
     "@mantine/hooks": "7.17.7",
     "@tabler/icons-react": "3.31.0",
-    "@tanstack/react-query": "5.75.1",
+    "@tanstack/react-query": "5.75.2",
     "bun-plugin-tailwind": "0.0.15",
     "firebase": "11.6.1",
     "react": "19.1.0",
