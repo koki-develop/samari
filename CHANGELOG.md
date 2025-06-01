@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.19](https://github.com/koki-develop/samari/compare/v0.1.18...v0.1.19) (2025-06-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.77.2 ([#110](https://github.com/koki-develop/samari/issues/110)) ([b51729b](https://github.com/koki-develop/samari/commit/b51729b40255d105802cd27ec92a45c626705976))
+* **deps:** update dependency firebase to v11.8.1 ([#111](https://github.com/koki-develop/samari/issues/111)) ([f98b15d](https://github.com/koki-develop/samari/commit/f98b15d7921a1246e0c2e0c324436d211cefb562))
+
 ## [0.1.18](https://github.com/koki-develop/samari/compare/v0.1.17...v0.1.18) (2025-05-04)
 
 
