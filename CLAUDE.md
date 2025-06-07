@@ -8,7 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `bun run build` - Build for production (uses custom build script)
 - `bun run fmt` - Format and fix code using Biome (includes --unsafe)
 - `bun run lint` - Check code formatting and linting with Biome
-- `bun test` - Run tests (uses Bun's built-in test runner)
+- `bun test` - Run all tests (uses Bun's built-in test runner)
+- `bun test <pattern>` - Run specific test files (e.g., `bun test util.spec.ts`)
+- `bun test --test-name-pattern <regex>` - Run tests matching name pattern
 - `bun run deploy` - Deploy to Firebase hosting
 - `bun run deploy:preview` - Deploy preview channel
 
@@ -43,3 +45,8 @@ This is a React SPA built with Bun, deployed to Firebase hosting. Key architectu
 **Deployment:**
 - Firebase hosting serves the SPA with catch-all routing to `index.html`
 - Build output goes to `dist/` directory
+
+**Commit Conventions:**
+- Follow conventional commit format: `type(scope): description`
+- Common types: `feat`, `fix`, `docs`, `chore`, `refactor`
+- Examples: `docs: add CLAUDE.md`, `chore(deps): update dependency X`, `fix: resolve Y issue`
