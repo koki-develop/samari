@@ -26,7 +26,7 @@
     "tailwindcss": "4.1.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.0-beta.5",
+    "@biomejs/biome": "2.0.0-beta.6",
     "@dotenvx/dotenvx": "1.44.1",
     "@types/bun": "1.2.15",
     "@types/react": "19.1.6",
