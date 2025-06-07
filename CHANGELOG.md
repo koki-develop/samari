@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.21](https://github.com/koki-develop/samari/compare/v0.1.20...v0.1.21) (2025-06-07)
+
+
+### Bug Fixes
+
+* **deps:** upgrade Mantine from v7.17.7 to v8.0.2 ([#126](https://github.com/koki-develop/samari/issues/126)) ([6bd2600](https://github.com/koki-develop/samari/commit/6bd2600c6a697056595e9a29d674b1314ef354db))
+
 ## [0.1.20](https://github.com/koki-develop/samari/compare/v0.1.19...v0.1.20) (2025-06-02)
 
 
