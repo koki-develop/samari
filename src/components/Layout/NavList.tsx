@@ -36,7 +36,6 @@ export default function NavList({ onSelectPostGroup }: NavListProps) {
             control:
               "bg-[var(--mantine-color-gray-0)] hover:bg-[var(--mantine-color-gray-1)] border-b border-solid border-[var(--mantine-color-gray-3)] mb-[-1px] pl-2",
             content: "p-0",
-            panel: "mt-[1px]",
             label: "py-2",
           }}
           multiple
