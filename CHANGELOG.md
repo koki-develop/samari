@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.22](https://github.com/koki-develop/samari/compare/v0.1.21...v0.1.22) (2025-08-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tabler/icons-react to v3.34.1 ([#130](https://github.com/koki-develop/samari/issues/130)) ([1410787](https://github.com/koki-develop/samari/commit/1410787f44aba33f713dff4e5d1bd22130bf9063))
+* **deps:** update dependency @tanstack/react-query to v5.85.2 ([#131](https://github.com/koki-develop/samari/issues/131)) ([2549c35](https://github.com/koki-develop/samari/commit/2549c351ce9e43aef56299fc284377cf081c63d2))
+* **deps:** update react monorepo ([#129](https://github.com/koki-develop/samari/issues/129)) ([15dc925](https://github.com/koki-develop/samari/commit/15dc925631b6ea78700f8cb7a11117e992d836b0))
+
 ## [0.1.21](https://github.com/koki-develop/samari/compare/v0.1.20...v0.1.21) (2025-06-07)
 
 
