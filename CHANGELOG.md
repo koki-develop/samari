@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/koki-develop/samari/compare/v0.1.25...v0.2.0) (2025-12-05)
+
+
+### Features
+
+* SAMARI Podcast ([#150](https://github.com/koki-develop/samari/issues/150)) ([4029d08](https://github.com/koki-develop/samari/commit/4029d0832a63a68e17b1bf15b33f4b1465881877))
+
 ## [0.1.25](https://github.com/koki-develop/samari/compare/v0.1.24...v0.1.25) (2025-12-05)
 
 
