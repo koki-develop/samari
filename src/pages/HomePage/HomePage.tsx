@@ -10,9 +10,11 @@ import {
 } from "@mantine/core";
 import { IconHeadphones } from "@tabler/icons-react";
 import clsx from "clsx";
+import { useAtom } from "jotai";
 import { useMemo } from "react";
 import ApplePodcastsIcon from "@/assets/icons/apple-podcasts.svg";
 import SpotifyIcon from "@/assets/icons/spotify.svg";
+import { isPlayingPodcastAtom } from "@/atoms/podcast";
 import { usePodcast, usePosts } from "@/lib/post";
 import { useActivePostGroup } from "@/lib/postGroup";
 import { groupBy } from "@/lib/util";
@@ -34,6 +36,7 @@ export default function HomePage() {
   const { posts, isFetching, hasNextPage, fetchNextPage } = usePosts(
     activePostGroup?.name ?? null,
   );
+  const [, setIsPlayingPodcast] = useAtom(isPlayingPodcastAtom);
 
   const postsGroupedByDate = useMemo(() => {
     return groupBy(posts, (post) => {
@@ -72,7 +75,13 @@ export default function HomePage() {
                 {cast.createdAt.toLocaleDateString()}に配信
               </Text>
               {/** biome-ignore lint/a11y/useMediaCaption: there is no caption available */}
-              <audio className="w-full" src={cast.mp3Url} controls />
+              <audio
+                className="w-full"
+                src={cast.mp3Url}
+                controls
+                onPlay={() => setIsPlayingPodcast(true)}
+                onPause={() => setIsPlayingPodcast(false)}
+              />
             </Box>
           )}
 

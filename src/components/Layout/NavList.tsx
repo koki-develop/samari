@@ -1,6 +1,9 @@
 import { Accordion, Box, Divider, Text } from "@mantine/core";
+import { IconVolume } from "@tabler/icons-react";
+import { useAtom } from "jotai";
 import { useMemo } from "react";
 import { useLocation } from "react-router";
+import { isPlayingPodcastAtom } from "@/atoms/podcast";
 import { useActivePostGroup } from "@/lib/postGroup";
 import { postGroupCategories } from "@/lib/postGroupCategory";
 import NavListFooter from "./NavListFooter";
@@ -12,6 +15,7 @@ export type NavListProps = {
 
 export default function NavList({ onSelectPostGroup }: NavListProps) {
   const { pathname } = useLocation();
+  const [isPlayingPodcast] = useAtom(isPlayingPodcastAtom);
 
   const activePostGroup = useActivePostGroup();
   const activePostGroupCategory = useMemo(() => {
@@ -26,7 +30,14 @@ export default function NavList({ onSelectPostGroup }: NavListProps) {
         <NavListItem
           id={null}
           icon={null}
-          name="All"
+          name={
+            <>
+              <span className="flex-1">All</span>
+              {isPlayingPodcast && (
+                <IconVolume className="ml-1 size-4 text-[var(--mantine-color-gray-6)]" />
+              )}
+            </>
+          }
           active={pathname === "/" && activePostGroup == null}
           onSelectPostGroup={onSelectPostGroup}
         />
