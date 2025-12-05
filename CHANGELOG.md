@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.25](https://github.com/koki-develop/samari/compare/v0.1.24...v0.1.25) (2025-12-05)
+
+
+### Bug Fixes
+
+* **firebase:** add redirect for /podcast.xml to external storage ([f6c6274](https://github.com/koki-develop/samari/commit/f6c627415e11c73716771b88aa6634c5e0d15584))
+
 ## [0.1.24](https://github.com/koki-develop/samari/compare/v0.1.23...v0.1.24) (2025-12-05)
 
 
