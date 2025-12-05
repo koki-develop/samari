@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.24](https://github.com/koki-develop/samari/compare/v0.1.23...v0.1.24) (2025-12-05)
+
+
+### Bug Fixes
+
+* Add podcast.png ([6491fea](https://github.com/koki-develop/samari/commit/6491feaabfcdb86e463dee5be9ecc6de6813f32b))
+* **deps:** update dependency @tanstack/react-query to v5.90.11 ([#140](https://github.com/koki-develop/samari/issues/140)) ([47a264c](https://github.com/koki-develop/samari/commit/47a264ca71f2f1d5124e92469f4b67363dbdb758))
+
 ## [0.1.23](https://github.com/koki-develop/samari/compare/v0.1.22...v0.1.23) (2025-11-27)
 
 
