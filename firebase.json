@@ -7,6 +7,13 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/podcast.xml",
+        "destination": "https://firebasestorage.googleapis.com/v0/b/samari-news.appspot.com/o/podcast.xml?alt=media",
+        "type": 307
+      }
     ]
   }
 }
