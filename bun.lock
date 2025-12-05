@@ -1,6 +1,5 @@
 {
   "lockfileVersion": 1,
-  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "bun-react-template",
@@ -10,6 +9,7 @@
         "@tabler/icons-react": "3.34.1",
         "@tanstack/react-query": "5.90.11",
         "bun-plugin-tailwind": "0.0.15",
+        "clsx": "2.1.1",
         "firebase": "11.8.1",
         "react": "19.1.1",
         "react-dom": "19.1.1",
