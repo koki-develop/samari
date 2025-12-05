@@ -1,11 +1,12 @@
 import { Anchor } from "@mantine/core";
+import type { ReactNode } from "react";
 import { Link } from "react-router";
 import { clsx } from "@/lib/util";
 
 type NavListItemProps = {
   id: string | null;
   icon: string | null;
-  name: string;
+  name: ReactNode;
   active: boolean;
 
   onSelectPostGroup: () => void;
