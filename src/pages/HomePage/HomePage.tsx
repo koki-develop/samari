@@ -1,6 +1,18 @@
-import { Badge, Box, Button, Loader, Title } from "@mantine/core";
+import {
+  Anchor,
+  Badge,
+  Box,
+  Button,
+  Card,
+  Loader,
+  Text,
+  Title,
+} from "@mantine/core";
+import { IconHeadphones } from "@tabler/icons-react";
 import { useMemo } from "react";
-import { usePosts } from "@/lib/post";
+import ApplePodcastsIcon from "@/assets/icons/apple-podcasts.svg";
+import SpotifyIcon from "@/assets/icons/spotify.svg";
+import { usePodcast, usePosts } from "@/lib/post";
 import { useActivePostGroup } from "@/lib/postGroup";
 import { groupBy } from "@/lib/util";
 import PostList from "./PostList";
@@ -17,6 +29,7 @@ const getDateText = (dateISOString: string) => {
 
 export default function HomePage() {
   const activePostGroup = useActivePostGroup();
+  const { cast } = usePodcast();
   const { posts, isFetching, hasNextPage, fetchNextPage } = usePosts(
     activePostGroup?.name ?? null,
   );
@@ -35,6 +48,69 @@ export default function HomePage() {
 
   return (
     <Box className="flex flex-col p-4 pb-28">
+      {!activePostGroup && (
+        <Box className="flex justify-center">
+          <Card
+            className="mb-4 flex w-full flex-col items-center gap-3 px-8 sm:w-3/4 md:w-4/5 lg:w-1/2"
+            withBorder
+          >
+            <Box className="flex flex-col items-center">
+              <Text
+                size="lg"
+                fw="bold"
+                classNames={{ root: "flex items-center" }}
+              >
+                <IconHeadphones className="mr-1 size-5" />
+                SAMARI Podcast
+              </Text>
+              <Text size="sm">最近要約された記事を音声で紹介</Text>
+            </Box>
+
+            {cast && (
+              <Box className="flex w-full flex-col items-end">
+                <Text c="gray" size="sm">
+                  {cast.createdAt.toLocaleDateString()}に配信
+                </Text>
+                {/** biome-ignore lint/a11y/useMediaCaption: there is no caption available */}
+                <audio className="w-full" src={cast.mp3Url} controls />
+              </Box>
+            )}
+
+            <Box className="flex flex-col items-center gap-1">
+              <Text c="gray" size="sm">
+                過去の配信
+              </Text>
+              <Box className="flex gap-2">
+                <Anchor
+                  href="https://podcasts.apple.com/podcast/samari-podcast/id1858742598"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={ApplePodcastsIcon}
+                    className="size-7"
+                    title="Apple Podcasts"
+                    alt="Apple Podcasts"
+                  />
+                </Anchor>
+                <Anchor
+                  href="https://open.spotify.com/show/0tRiLhIRG9gQjNPHRfPPa4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={SpotifyIcon}
+                    className="size-7"
+                    alt="Spotify"
+                    title="Spotify"
+                  />
+                </Anchor>
+              </Box>
+            </Box>
+          </Card>
+        </Box>
+      )}
+
       {activePostGroup && (
         <Box className="flex items-center gap-2 pb-4 sm:pb-0">
           <title>{title}</title>

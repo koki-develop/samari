@@ -1,4 +1,4 @@
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import {
   collection,
   type FirestoreDataConverter,
@@ -16,6 +16,11 @@ import {
   type PostGroup,
   type PostGroupName,
 } from "./postGroup";
+
+export type Cast = {
+  createdAt: Date;
+  mp3Url: string;
+};
 
 export type Post = {
   id: string;
@@ -101,5 +106,38 @@ export const usePosts = (group: PostGroupName | null) => {
   return {
     ...values,
     posts: data ?? [],
+  };
+};
+
+export const usePodcast = () => {
+  const { data, ...values } = useQuery({
+    queryKey: ["podcast", "latest"],
+    gcTime: 60 * 30 * 1000,
+    queryFn: async () => {
+      return await _getCast();
+    },
+  });
+
+  return {
+    ...values,
+    cast: data ?? null,
+  };
+};
+
+const _getCast = async (): Promise<Cast> => {
+  const castsCollection = collection(firestore, "casts");
+  const castsQuery = query(
+    castsCollection,
+    orderBy("createdAt", "desc"),
+    limit(1),
+  );
+  const snapshot = await getDocs(castsQuery);
+
+  const doc = snapshot.docs[0];
+  const data = doc.data();
+
+  return {
+    createdAt: data.createdAt.toDate(),
+    mp3Url: data.mp3Url,
   };
 };
