@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/koki-develop/samari/compare/v0.2.0...v0.3.0) (2025-12-06)
+
+
+### Features
+
+* add Anthropic and OpenAI AI post groups with icons ([7e52bf4](https://github.com/koki-develop/samari/commit/7e52bf4e05be0c3c2a2132a392a1dab053af9131))
+
 ## [0.2.0](https://github.com/koki-develop/samari/compare/v0.1.25...v0.2.0) (2025-12-05)
 
 
