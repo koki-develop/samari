@@ -1,5 +1,6 @@
 import { useLocation, useSearchParams } from "react-router";
 import AngularIcon from "@/assets/icons/angular.svg";
+import AnthropicIcon from "@/assets/icons/anthropic.svg";
 import AwsIcon from "@/assets/icons/aws.svg";
 import AzureIcon from "@/assets/icons/azure.svg";
 import BitbucketIcon from "@/assets/icons/bitbucket.svg";
@@ -15,6 +16,7 @@ import KubernetesIcon from "@/assets/icons/kubernetes.svg";
 import NextjsIcon from "@/assets/icons/nextjs.svg";
 import NodejsIcon from "@/assets/icons/nodejs.svg";
 import NuxtIcon from "@/assets/icons/nuxt.svg";
+import OpenAIIcon from "@/assets/icons/openai.svg";
 import PythonIcon from "@/assets/icons/python.svg";
 import RailsIcon from "@/assets/icons/rails.svg";
 import ReactIcon from "@/assets/icons/react.svg";
@@ -31,6 +33,9 @@ export type PostGroupName =
   | "CircleCI"
   | "GitHub"
   | "GitLab"
+  // AI
+  | "Anthropic"
+  | "OpenAI"
   // Cloud/Infrastructure
   | "AWS"
   | "Azure"
@@ -68,6 +73,9 @@ const _icons: Record<PostGroupName, string> = {
   CircleCI: CircleCIIcon,
   GitHub: GitHubIcon,
   GitLab: GitLabIcon,
+  // AI
+  Anthropic: AnthropicIcon,
+  OpenAI: OpenAIIcon,
   // Cloud/Infrastructure
   AWS: AwsIcon,
   Azure: AzureIcon,
@@ -107,6 +115,9 @@ export const bitbucket: PostGroup = _buildPostGroup("bitbucket", "Bitbucket");
 export const circleci: PostGroup = _buildPostGroup("circleci", "CircleCI");
 export const github: PostGroup = _buildPostGroup("github", "GitHub");
 export const gitlab: PostGroup = _buildPostGroup("gitlab", "GitLab");
+// AI
+export const anthropic: PostGroup = _buildPostGroup("anthropic", "Anthropic");
+export const openai: PostGroup = _buildPostGroup("openai", "OpenAI");
 // Cloud / Infrastructure
 export const aws: PostGroup = _buildPostGroup("aws", "AWS");
 export const azure: PostGroup = _buildPostGroup("azure", "Azure");
@@ -147,6 +158,9 @@ const _groups: Record<PostGroupName, PostGroup> = {
   CircleCI: circleci,
   GitHub: github,
   GitLab: gitlab,
+  // AI
+  Anthropic: anthropic,
+  OpenAI: openai,
   // Cloud / Infrastructure
   AWS: aws,
   Azure: azure,

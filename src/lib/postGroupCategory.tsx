@@ -1,5 +1,6 @@
 import {
   IconBook2,
+  IconBrain,
   IconCloud,
   IconCode,
   type IconProps,
@@ -8,6 +9,7 @@ import {
 import type { ReactNode } from "react";
 import {
   angular,
+  anthropic,
   aws,
   azure,
   bitbucket,
@@ -23,6 +25,7 @@ import {
   nextjs,
   nodejs,
   nuxt,
+  openai,
   type PostGroup,
   python,
   rails,
@@ -51,6 +54,11 @@ export const postGroupCategories: PostGroupCategory[] = [
     name: "Development",
     icon: <IconSourceCode {...iconProps} />,
     groups: [bitbucket, circleci, github, gitlab],
+  },
+  {
+    name: "AI",
+    icon: <IconBrain {...iconProps} />,
+    groups: [anthropic, openai],
   },
   {
     name: "Cloud / Infrastructure",
