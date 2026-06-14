@@ -1,6 +1,6 @@
-import { ActionIcon, Anchor, AppShell, Drawer } from "@mantine/core";
+import { ActionIcon, Alert, Anchor, AppShell, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconMenu2 } from "@tabler/icons-react";
+import { IconAlertTriangle, IconMenu2 } from "@tabler/icons-react";
 import { useCallback } from "react";
 import { Link, Outlet, ScrollRestoration } from "react-router";
 import Logo from "@/assets/logo/logo.png";
@@ -61,6 +61,23 @@ export default function Layout() {
         </Drawer>
 
         <AppShell.Main>
+          <Alert
+            classNames={{
+              root: "rounded-none",
+              body: "text-center",
+              title: "justify-center",
+            }}
+            color="yellow"
+            title={
+              <span className="inline-flex items-center gap-2">
+                <IconAlertTriangle size={20} />
+                サービス停止のお知らせ
+              </span>
+            }
+          >
+            SAMARI
+            は近日中にサービスを停止する予定です。記事の更新は既に停止しています。
+          </Alert>
           <Outlet />
         </AppShell.Main>
       </AppShell>
