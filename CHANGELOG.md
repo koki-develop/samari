@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/koki-develop/samari/compare/v0.3.0...v0.4.0) (2026-06-14)
+
+
+### Features
+
+* add service shutdown notice banner ([ee484a4](https://github.com/koki-develop/samari/commit/ee484a41dc6d75cd448d2a523e24841310dd5734))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-router to v7.12.0 [security] ([#154](https://github.com/koki-develop/samari/issues/154)) ([8c5c173](https://github.com/koki-develop/samari/commit/8c5c173309cc308e55d1b1332230564bc19ce8d1))
+
 ## [0.3.0](https://github.com/koki-develop/samari/compare/v0.2.0...v0.3.0) (2025-12-06)
 
 
